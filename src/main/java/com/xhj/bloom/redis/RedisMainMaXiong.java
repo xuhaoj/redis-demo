@@ -1,4 +1,4 @@
-package com.xhj.bloom;
+package com.xhj.bloom.redis;
 
 import com.google.common.hash.Funnels;
 import com.google.common.hash.Hashing;
@@ -6,7 +6,8 @@ import redis.clients.jedis.Jedis;
 
 import java.nio.charset.Charset;
 
-public class RedisMain {
+
+public class RedisMainMaXiong {
     static final int expectedInsertions = 100;//要插入多少数据
     static final double fpp = 0.01;//期望的误判率
 

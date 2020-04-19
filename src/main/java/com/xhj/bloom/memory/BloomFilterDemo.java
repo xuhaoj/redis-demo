@@ -1,15 +1,18 @@
-package com.xhj.bloom;
+package com.xhj.bloom.memory;
 
 import com.google.common.base.Charsets;
 import com.google.common.hash.BloomFilter;
 import com.google.common.hash.Funnels;
 
 import java.text.NumberFormat;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+import java.util.UUID;
 
 /**
  * 测试布隆过滤器的正确判断和误判
- * <p>
  * 往布隆过滤器里面存放100万个元素
  * 测试100个存在的元素和9900个不存在的元素
  */
@@ -37,8 +40,11 @@ public class BloomFilterDemo {
             lists.add(uuid);
         }
 
-        int right = 0; // 正确判断的次数
-        int wrong = 0; // 错误判断的次数
+        // 正确判断的次数
+        int right = 0;
+
+        // 错误判断的次数
+        int wrong = 0;
 
         for (int i = 0; i < 10000; i++) {
             // 可以被100整除的时候，取一个存在的数。否则随机生成一个UUID
@@ -57,7 +63,8 @@ public class BloomFilterDemo {
         }
 
         NumberFormat percentFormat = NumberFormat.getPercentInstance();
-        percentFormat.setMaximumFractionDigits(2); //最大小数位数
+        //最大小数位数
+        percentFormat.setMaximumFractionDigits(2);
         float percent = (float) wrong / 9900;
         float bingo = (float) (9900 - wrong) / 9900;
 
