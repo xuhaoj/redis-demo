@@ -7,7 +7,7 @@ import redis.clients.jedis.Jedis;
 import java.nio.charset.Charset;
 
 
-public class RedisMainMaXiong {
+public class RedisMainMX {
     static final int expectedInsertions = 100;//要插入多少数据
     static final double fpp = 0.01;//期望的误判率
 

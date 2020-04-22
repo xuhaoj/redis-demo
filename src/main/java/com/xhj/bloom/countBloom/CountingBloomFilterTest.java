@@ -11,7 +11,7 @@ public class CountingBloomFilterTest {
     public static void main(String[] args) {
         CountingBloomFilter<String> cbf = new FilterBuilder(1000,
                 0.01).buildCountingBloomFilter();
-        cbf.add("http://gupaoedu.com");
+        cbf.add("http://taobao.com");
         cbf.add("http://alibaba.com");
         cbf.add("http://baidu.com");
 

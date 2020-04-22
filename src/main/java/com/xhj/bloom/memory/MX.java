@@ -4,7 +4,7 @@ package com.xhj.bloom.memory;
 import com.google.common.hash.BloomFilter;
 import com.google.common.hash.Funnels;
 
-public class MaXiong {
+public class MX {
     private static int size = 1000000;//预计要插入多少数据
 
     private static double fpp = 0.01;//期望的误判率
