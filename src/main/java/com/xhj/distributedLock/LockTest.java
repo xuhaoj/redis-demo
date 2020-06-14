@@ -1,4 +1,4 @@
-package com.xhj.lock;
+package com.xhj.distributedLock;
 
 import org.redisson.Redisson;
 import org.redisson.api.RLock;
@@ -7,7 +7,9 @@ import org.redisson.config.Config;
 
 import java.util.concurrent.TimeUnit;
 
-
+/**
+ * @author jack xu
+ */
 public class LockTest {
     private static RedissonClient redissonClient;
 
@@ -18,7 +20,7 @@ public class LockTest {
     }
 
     public static void main(String[] args) throws InterruptedException {
-        RLock rLock = redissonClient.getLock("updateAccount");
+        RLock rLock = redissonClient.getLock("jackxu");
         // 最多等待100秒、上锁10s以后自动解锁
         if (rLock.tryLock(100, 10, TimeUnit.SECONDS)) {
             System.out.println("获取锁成功");
