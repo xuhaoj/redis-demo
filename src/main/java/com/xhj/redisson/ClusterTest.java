@@ -5,7 +5,9 @@ import org.redisson.api.RBucket;
 import org.redisson.api.RedissonClient;
 import org.redisson.config.Config;
 
-
+/**
+ * @author jack xu
+ */
 public class ClusterTest {
     public static void main(String[] args) {
 
@@ -36,4 +38,5 @@ public class ClusterTest {
         //最后关闭RedissonClient
         redisson.shutdown();
     }
+
 }

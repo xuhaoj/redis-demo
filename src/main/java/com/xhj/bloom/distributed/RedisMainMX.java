@@ -1,4 +1,4 @@
-package com.xhj.bloom.redis;
+package com.xhj.bloom.distributed;
 
 import com.google.common.hash.Funnels;
 import com.google.common.hash.Hashing;

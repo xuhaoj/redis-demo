@@ -1,4 +1,4 @@
-package com.xhj.bloom.redis;
+package com.xhj.bloom.distributed;
 
 import com.google.common.hash.Funnels;
 import lombok.extern.slf4j.Slf4j;
