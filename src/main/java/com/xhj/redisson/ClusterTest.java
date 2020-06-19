@@ -10,7 +10,6 @@ import org.redisson.config.Config;
  */
 public class ClusterTest {
     public static void main(String[] args) {
-
         //创建配置
         Config config = new Config();
         config.setCodec(new org.redisson.client.codec.StringCodec());
@@ -38,5 +37,4 @@ public class ClusterTest {
         //最后关闭RedissonClient
         redisson.shutdown();
     }
-
 }
